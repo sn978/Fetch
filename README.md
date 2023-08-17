@@ -1,6 +1,6 @@
 # FetchRewards
 
-**#ETL off a SQS Queue**
+**ETL off a SQS Queue**
 This repository contains a small application that demonstrates the process of reading JSON data from an AWS SQS Queue, transforming the data, and writing it to a PostgreSQL database. The application is designed to run locally using Dockerized services for Localstack and Postgres
 
 **Overview**
