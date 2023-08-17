@@ -44,23 +44,33 @@ The masking of sensitive information is done using MD5 hashing.
 
 The project could be further enhanced with:
 ->Comprehensive error handling and logging mechanisms.
+
 ->Unit tests to ensure the correctness of the processing pipeline.
+
 ->Better separation of concerns through modularization and clean architecture.
+
 ->Containerization of the application for easier deployment.
+
 ->CI/CD integration to automate testing and deployment processes.
 
 **Deployment in Production**
 consider the following steps:
 ->Use actual AWS SQS and RDS services instead of Localstack and Dockerized Postgres.
+
 ->Implement security measures, including access controls, encryption, and secure credentials management.
+
 ->Set up monitoring and alerting to track pipeline performance and errors.
+
 ->Use a container orchestration tool (e.g., Kubernetes) to manage the application's deployment and scaling.
 
 **Scaling with Growing Dataset**
 
 ->To handle a growing dataset:
+
 ->Optimize the database schema with proper indexing and partitioning strategies.
+
 ->Consider using distributed message queues (e.g., Amazon SQS) and database sharding for scalability.
+
 ->Implement data parallelization and batching for more efficient processing.
 
 **PII Recovery**
