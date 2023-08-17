@@ -24,3 +24,7 @@ Navigate to the repository directory: cd Project path
 **Running the Application**
 
 Start the Docker containers for Localstack and Postgres:
+
+use the following cmd in the cmd prompt
+docker-compose up -d
+ 
