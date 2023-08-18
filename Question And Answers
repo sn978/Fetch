@@ -1,1 +1,34 @@
 
+ **Assumptions**
+The provided JSON data has a specific structure as defined in the SQS message format.
+The masking of sensitive information is done using MD5 hashing.
+In order to mask the values and should be able to retrieve them I have used Hashing
+Hashing is typically used for this purpose, as it provides a one-way transformation that allows duplicates to be identified without exposing the original values.
+
+**Next Steps**
+
+The project could be further enhanced with:
+1. Comprehensive error handling and logging mechanisms.
+2. Unit tests to ensure the correctness of the processing pipeline.
+3. Better separation of concerns through modularization and clean architecture.
+4. Containerization of the application for easier deployment.
+5. CI/CD integration to automate testing and deployment processes.
+
+**Deployment in Production**
+consider the following steps:
+1. Use actual AWS SQS and RDS services instead of Localstack and Dockerized Postgres.
+2. Implement security measures, including access controls, encryption, and secure credentials management.
+3. Set up monitoring and alerting to track pipeline performance and errors.
+4. Use a container orchestration tool (e.g., Kubernetes) to manage the application's deployment and scaling.
+
+**Scaling with Growing Dataset**
+
+To handle a growing dataset:
+1. Optimize the database schema with proper indexing and partitioning strategies.
+2. Consider using distributed message queues (e.g., Amazon SQS) and database sharding for scalability.
+3. Implement data parallelization and batching for more efficient processing.
+
+**PII Recovery**
+PII recovery could be achieved using secure key management and encryption techniques. Decrypting masked data would require proper authorization and authentication mechanisms.
+   
+
