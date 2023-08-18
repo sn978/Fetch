@@ -30,10 +30,10 @@ Navigate to the repository directory: cd Project path
    This will create a local environment with AWS services and a PostgreSQL database
 4. Open a different command prompt in the same directory
 5. Run the ETL script by executing the following command in the command prompt
-   -python FetchRewards.py
+   -python AppFetch.py
 The script is designed to extract user login data from the SQS Queue, safeguarding sensitive details such as IP addresses and device IDs, before depositing the secured data into the PostgreSQL database.
 
-6. Stop the Docker containers when you're done:
+7. Stop the Docker containers when you're done:
    -docker-compose down
 
 **Assumptions**
