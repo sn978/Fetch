@@ -35,36 +35,14 @@ The script is designed to extract user login data from the SQS Queue, safeguardi
 
 7. Stop the Docker containers when you're done:
    -docker-compose down
-
-**Assumptions**
-The provided JSON data has a specific structure as defined in the SQS message format.
-The masking of sensitive information is done using MD5 hashing.
-
-**Next Steps**
-
-The project could be further enhanced with:
-1. Comprehensive error handling and logging mechanisms.
-2. Unit tests to ensure the correctness of the processing pipeline.
-3. Better separation of concerns through modularization and clean architecture.
-4. Containerization of the application for easier deployment.
-5. I/CD integration to automate testing and deployment processes.
-
-**Deployment in Production**
-consider the following steps:
-1. Use actual AWS SQS and RDS services instead of Localstack and Dockerized Postgres.
-2. Implement security measures, including access controls, encryption, and secure credentials management.
-3. Set up monitoring and alerting to track pipeline performance and errors.
-4. Use a container orchestration tool (e.g., Kubernetes) to manage the application's deployment and scaling.
-
-**Scaling with Growing Dataset**
-
-To handle a growing dataset:
-1. Optimize the database schema with proper indexing and partitioning strategies.
-2. Consider using distributed message queues (e.g., Amazon SQS) and database sharding for scalability.
-3. Implement data parallelization and batching for more efficient processing.
-
-**PII Recovery**
-PII recovery could be achieved using secure key management and encryption techniques. Decrypting masked data would require proper authorization and authentication mechanisms.
    
+**Checking The DataBase**
+
+To check if the Data is loaded as expected in the Data Base:
+
+1. Open a new command prompt and connect it to the Postgres database using the following command
+   **docker exec -it <Container Name>psql -U postgres -d postgres**
+2. Use the following command to retrieve data from the User_logins Table
+   SELECT * FROM user_logins;  
 
  
